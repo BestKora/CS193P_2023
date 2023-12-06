@@ -8,15 +8,15 @@
 import Foundation
 
 struct MemoryGame <CardContent> {
-    var card: Array<Card>
+    var cards: Array<Card>
     
-    func choose (card:Card) {
+    func choose (card: Card){
         
     }
-    
-    struct Card  {
+    struct Card   {
         var isFaceUp: Bool
         var isMatched: Bool
         var content: CardContent
     }
 }
+
