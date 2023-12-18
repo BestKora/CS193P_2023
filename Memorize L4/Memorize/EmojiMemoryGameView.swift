@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var viewModel: EmojiMemoryGame
+struct EmojiMemoryGameView: View {
+    
+    var viewModel: EmojiMemoryGame = EmojiMemoryGame()
     
     let emojis =  ["👻","🎃","🕷️","😈","💀","🕸️","🧙‍♀️","🙀","👹","😱","☠️","🍭"]
     
@@ -40,7 +41,7 @@ struct CardView: View {
             Group {
                 base.fill(.white)
                 base.strokeBorder(lineWidth: 2)
-                Text(content).font(.largeTitle)
+                Text(content).font(Font.largeTitle)
             }
             .opacity(isFaceUp ? 1 : 0)
             
@@ -53,6 +54,6 @@ struct CardView: View {
 }
 
 #Preview {
-    ContentView()
+    EmojiMemoryGameView()
 }
 
