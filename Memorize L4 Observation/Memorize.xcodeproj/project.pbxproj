@@ -56,9 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				E4ABC2BE2ADC4F2200398F7F /* MemorizeApp.swift */,
-				E4ABC2C02ADC4F2200398F7F /* EmojiMemoryGameView.swift */,
 				E4D3D4A12B1873E800046BE5 /* MemoryGame.swift */,
 				E4D3D49F2B17229100046BE5 /* EmojiMemoryGame.swift */,
+				E4ABC2C02ADC4F2200398F7F /* EmojiMemoryGameView.swift */,
 				E4ABC2C22ADC4F2500398F7F /* Assets.xcassets */,
 				E4ABC2C42ADC4F2500398F7F /* Preview Content */,
 			);
@@ -288,6 +288,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,6 +318,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

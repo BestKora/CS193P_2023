@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import Observation
 
-class EmojiMemoryGame: ObservableObject {
+@Observable
+class EmojiMemoryGame {
     private static let emojis =
         ["👻","🎃","🕷️","😈","💀","🕸️","🧙‍♀️","🙀","👹","😱","☠️","🍭"]
     
@@ -21,7 +23,7 @@ class EmojiMemoryGame: ObservableObject {
         }
     }
     
-    @Published private var model = createMemoryGame()
+    private var model = createMemoryGame()
     
     var cards: Array<MemoryGame<String>.Card> {
         return model.cards

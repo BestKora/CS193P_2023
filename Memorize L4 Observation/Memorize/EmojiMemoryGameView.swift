@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmojiMemoryGameView: View {
     
-    @ObservedObject var viewModel: EmojiMemoryGame
+    var viewModel: EmojiMemoryGame
     
     var body: some View {
         VStack{
@@ -22,7 +22,6 @@ struct EmojiMemoryGameView: View {
         }
             .padding()
         }
-    
     
     var cards: some View {
         LazyVGrid (columns:
