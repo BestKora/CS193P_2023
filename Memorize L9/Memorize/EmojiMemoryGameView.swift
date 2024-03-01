@@ -47,7 +47,7 @@ struct EmojiMemoryGameView: View {
         }
     }
     
-    private var cards: some View {
+    private var cards: some View  {
         AspectVGrid (viewModel.cards, aspectRatio: aspectRatio){ card in
             if isDealt(card) {
                 CardView(card)
