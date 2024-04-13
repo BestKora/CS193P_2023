@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct EditablePaletteList: View {
-    /*@ObservedObject*/@Bindable var store: PaletteStore
+    @Bindable var store: PaletteStore
     
     @State private var showCursorPalette = false
     
