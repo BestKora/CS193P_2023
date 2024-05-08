@@ -53,7 +53,7 @@ struct EditablePaletteList: View {
 }
 
 struct PaletteList: View {
-    /*@EnvironmentObject*/@State var store: PaletteStore
+    @Environment(PaletteStore.self) var store
     
     var body: some View {
         NavigationStack {
@@ -95,7 +95,7 @@ struct PaletteView: View {
 
 struct PaletteList_Previews: PreviewProvider {
     static var previews: some View {
-        PaletteList(store: PaletteStore(named: "Preview"))
-           // .environmentObject()
+        PaletteList()
+            .environment(PaletteStore(named: "Preview"))
     }
 }

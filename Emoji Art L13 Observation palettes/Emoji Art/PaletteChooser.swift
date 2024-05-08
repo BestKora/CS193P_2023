@@ -9,19 +9,20 @@
 import SwiftUI
 
 struct PaletteChooser: View {
-    /*@Environment*/ @State var store: PaletteStore
+    @Environment(PaletteStore.self) var store
     
     @State private var showPaletteEditor = false
     @State private var showPaletteList = false
-
+ 
     var body: some View {
+        @Bindable var store = store
         HStack {
             chooser
             view(for: store.palettes[store.cursorIndex])
         }
         .clipped()
         .sheet(isPresented: $showPaletteEditor) {
-            PaletteEditor(palette: $store.palettes[store.cursorIndex])
+            PaletteEditor(palette:  $store.palettes[store.cursorIndex])
                 .font(nil)
         }
         .sheet(isPresented: $showPaletteList) {
@@ -99,7 +100,7 @@ struct ScrollingEmojis: View {
 
 struct PaletteChooser_Previews: PreviewProvider {
     static var previews: some View {
-        PaletteChooser( store: PaletteStore(named: "Preview"))
-           // .environment(PaletteStore(named: "Preview"))
+        PaletteChooser()
+            .environment(PaletteStore(named: "Preview"))
     }
 }

@@ -12,13 +12,13 @@ struct EmojiArtDocumentView: View {
     typealias Emoji = EmojiArt.Emoji
     
     @ObservedObject var document: EmojiArtDocument
-    /*@Environment*/ @State var store: PaletteStore
+  
     private let paletteEmojiSize: CGFloat = 40
 
     var body: some View {
         VStack(spacing: 0) {
             documentBody
-            PaletteChooser(store: store)
+            PaletteChooser()
                 .font(.system(size: paletteEmojiSize))
                 .padding(.horizontal)
                 .scrollIndicators(.hidden)
@@ -118,7 +118,7 @@ struct EmojiArtDocumentView: View {
 
 struct EmojiArtDocumentView_Previews: PreviewProvider {
     static var previews: some View {
-        EmojiArtDocumentView(document: EmojiArtDocument(), store: PaletteStore(named: "Preview"))
-           // .environment(PaletteStore(named: "Preview"))
+        EmojiArtDocumentView(document: EmojiArtDocument())
+            .environment(PaletteStore(named: "Preview"))
     }
 }
