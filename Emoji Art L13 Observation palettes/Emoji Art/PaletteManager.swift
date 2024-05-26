@@ -16,12 +16,12 @@ struct PaletteManager: View {
     var body: some View {
         NavigationSplitView {
             List(stores, selection: $selectedStore) { store in
-              Text(store.name)
+          //    Text(store.name)
                 
                 // this is not "bad" because PaletteStore is @Observable
                 // and  [PaletteStore]) is @Observable too
-                // So we don't need PaletteStoreView(store: store)
-                
+                // So we don't need
+                PaletteStoreView(store: store)
                     .tag(store)
             }
         } content: {
